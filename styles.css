@@ -1,3 +1,4 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,80 +6,106 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* Header Styles */
 header {
-    background-color: #007bff;
+    background-color: #004080;
     color: white;
-    padding: 20px 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
+header .logo {
+    font-size: 24px;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 10px;
+header .user-menu {
+    display: flex;
+    align-items: center;
 }
 
-nav ul {
-    text-align: center;
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
+header .user-menu a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    margin-left: 10px;
 }
 
-section {
-    padding: 30px 0;
-    background-color: white;
-    margin-bottom: 20px;
+/* Sidebar Navigation */
+aside {
+    width: 200px;
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    height: 100vh;
+    position: fixed;
 }
 
-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-ul {
+aside nav ul {
     list-style-type: none;
-    padding: 0;
 }
 
-ul li {
-    margin-bottom: 10px;
-    text-align: center;
+aside nav ul li {
+    margin-bottom: 15px;
 }
 
-ul li a {
-    color: #007bff;
+aside nav ul li a {
+    color: white;
     text-decoration: none;
-    font-size: 18px;
 }
 
-ul li a:hover {
+aside nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Main Content Styles */
+main {
+    margin-left: 220px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.dashboard h2 {
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card ul {
+    list-style-type: none;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
 footer {
-    background-color: #333;
+    background-color: #004080;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 10px;
+    margin-top: auto;
 }
+
